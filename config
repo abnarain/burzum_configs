@@ -1,0 +1,116 @@
+servers = (
+
+  {
+    address       = "irc.freenode.net";
+    port          = "6667";
+    chatnet       = "freenode";
+    autoconnect   = "yes";
+  },
+
+#  {
+ #   address = "talk.google.com";
+  #  chatnet = "GTalk";
+   # password = "";
+    # autoconnect = "yes";
+     # },
+
+
+
+);
+
+chatnets = {
+  freenode = {
+    type          = "IRC";
+  };
+
+#GTalk = {
+ #   type = "XMPP";
+  #  nick = "abhinavnarain10@gmail.com";
+   #};
+
+
+};
+
+
+windows = {
+  1 = {
+    immortal = "yes";
+    name = "(status)";
+    level = "ALL";
+    sticky = "yes";
+  };
+  2 = { name = "(GTalk)"; sticky = "yes"; parent = "1"; };
+};
+
+
+channels = (
+  { name = "#openwrt";        chatnet = "freenode";   autojoin = "no";  },
+
+);
+
+aliases = {
+  J = "join";
+  WJOIN = "join -window";
+  WQUERY = "query -window";
+  LEAVE = "part";
+  BYE = "quit";
+  EXIT = "quit";
+  SIGNOFF = "quit";
+  DESCRIBE = "action";
+  DATE = "time";
+  HOST = "userhost";
+  LAST = "lastlog";
+  SAY = "msg *";
+  WI = "whois";
+  WII = "whois $0 $0";
+  WW = "whowas";
+  W = "who";
+  N = "names";
+  M = "msg";
+  T = "topic";
+  C = "clear";
+  CL = "clear";
+  K = "kick";
+  KB = "kickban";
+  KN = "knockout";
+  BANS = "ban";
+  B = "ban";
+  MUB = "unban *";
+  UB = "unban";
+  IG = "ignore";
+  UNIG = "unignore";
+  SB = "scrollback";
+  UMODE = "mode $N";
+  WC = "window close";
+  WN = "window new hide";
+  SV = "say Irssi $J ($V) - http://irssi.org/";
+  GOTO = "sb goto";
+  CHAT = "dcc chat";
+  RUN = "SCRIPT LOAD";
+  CALC = "exec - if command -v bc >/dev/null 2>&1\\; then printf '%s=' '$*'\\; echo '$*' | bc -l\\; else echo bc was not found\\; fi";
+  SBAR = "STATUSBAR";
+  INVITELIST = "mode $C +I";
+  Q = "QUERY";
+  "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
+  EXEMPTLIST = "mode $C +e";
+  ATAG = "WINDOW SERVER";
+  UNSET = "set -clear";
+  RESET = "set -default";
+};
+
+settings = {
+  core = {
+    real_name = "Abhinav Narain";
+    user_name = "abhinav";
+    nick = "fillit";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+
+  "fe-common/xmpp" = {
+    xmpp_status_window = "yes";
+    xmpp_send_composing = "no";
+  };
+  "xmpp/core" = { xmpp_set_nick_as_username = "yes"; };
+
+
+};
