@@ -1,0 +1,13 @@
+
+#Abhinav's screenrc
+#termcapinfo xterm*|Eterm|mlterm|mrxvt 'hs:ts=\E]0;:fs=\007:ds=\E]0;screen\007' 
+altscreen on
+attrcolor b ".I"
+term xterm
+startup_message off
+autodetach on
+verbose on
+nonblock on
+#see bottom of file for more complete description.
+caption always "%?%F%{-b bc}%:%{-b bb}%?%C|%D|%M %d|%{+b rG}%H%?%F%{+u wb}%? %L=%-Lw%45>%{+b by}%n%f* %t%{-}%+Lw%-0<"
+
